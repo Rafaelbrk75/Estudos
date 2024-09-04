@@ -26,9 +26,17 @@ const matriz = [
     ["l3, c1", "l3, c2", "l3, c3", "l3, c4"],
   ]
 
-console.table(matriz)
+//console.table(matriz)
 
-matriz.push(["Nova linha"])
-matriz[0].push("Nova coluna")
+//matriz.push(["Nova linha"])
+//matriz[0].push("Nova coluna")
 
-console.table(matriz)
+//console.table(matriz)
+
+//Para poder iterar facilmente pela matriz
+for (let i = 0; i < matriz.length; i++){
+  for(let j = 0; j < matriz[i].length; j++){
+    const elemento = matriz[i][j]
+    console.log("Posição: (" + i +", " + j + ") Valor: " + elemento)
+  }
+}
