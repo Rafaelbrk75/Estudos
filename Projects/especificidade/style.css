@@ -1,0 +1,13 @@
+/* O id é o de maior prioridade */
+#azul {
+    color: #00f;
+}
+
+/* Ele vai ter maoir prioridade devido os 2 seletores*/
+body > h1 {
+    color: #0f0;
+}
+
+h1 {
+    color: #f00;
+}
