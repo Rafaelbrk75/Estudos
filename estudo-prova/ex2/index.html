@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+    <style>
+
+        h1{
+            text-align: center;
+            margin-top: 20px;
+            color: #000000;
+        }
+
+        #edt{
+            justify-content: center;
+            align-items: center;
+            padding-top: 10px;
+            width: 400px;
+            height: 300px;
+            border-color: #000000;
+            border-radius: 10px;
+            border-style: solid;
+            border-width: 5px;
+            margin-top: 30px;
+        }
+
+        .mt-3{
+            margin: 5px;
+            padding-top: 10px;
+            border-radius: 5px;
+        } 
+
+        button{
+            border-radius: 5px;
+        }
+
+        #edicao{
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding-top: 10px;
+            width: 400px;
+            height: 300px;
+            border-color: #000000;
+            border-radius: 10px;
+            border-style: solid;
+            border-width: 5px;
+            margin-top: 30px;
+            margin: 0 auto;
+        }
+
+        .bum {
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Produtos</h1>
+    <section id="inicio">
+        <div class="container" id="edt">
+            <div class="mt-3">
+                <label for="name">Nome:</label>
+                <input type="text" id="name">
+            </div>
+            <div class="row">
+                <div class="mt-3">
+                    <button id="pesq">Pesquisar</button>
+                </div>
+                <div class="mt-3">
+                    <a href="#edicao"><button id="btn-edita">Editar</button></a>
+                </div>
+                <div class="mt-3">
+                    <button id="excluir">Excluir</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="edicao">
+        <form>
+            <div class="container">
+                <div class="mt-3">
+                    <label for="edt-name">Nome:</label>
+                    <input type="text" id="edt-name">
+                </div>
+                <div class="mt-3">
+                    <label for="preco">Preço:</label>
+                    <input type="text" id="preco">
+            </div>
+            <div class="mt-3">
+                <label for="quantidade">Quantidade:</label>
+                <input type="text" id="quantidade">
+            </div>
+            <div class="d-flex">
+                <div class="mt-3">
+                    <button class="btn btn-success" id="salvar">Salvar</button>
+                </div>
+                <div class="mt-3">
+                    <a href="#inicio"><button class="btn btn-secondary" id="voltar">Voltar</button></a>
+                </div>
+            </div>
+        </form>
+    </section>
+    <script>
+        let produtos = [
+            { "nome": "Produto 1", "preco": 10.00, "quantidade": 5 },
+            { "nome": "Produto 2", "preco": 20.00, "quantidade": 10 },
+            { "nome": "Produto 3", "preco": 30.00, "quantidade": 15 }
+        ];
+
+        let btnEdita = document.getElementById("btn-edita");
+        let btnExcluir = document.getElementById("excluir");
+        let btnSalvar = document.getElementById("salvar");
+        let btnVoltar = document.getElementById("voltar");
+        let btnPesquisar = document.getElementById("pesq")
+
+        btnEdita.addEventListener("click", function(){
+            let home = document.getElementById("inicio");
+            let btnEditar = document.getElementById("edicao");
+            home.style.display = "none";
+            btnEditar.style.display = "flex"
+        })
+
+        btnVoltar.addEventListener("click", function(){
+            let home = document.getElementById("inicio");
+            let btnEditar = document.getElementById("edicao");
+
+            btnEditar.style.display = "none"
+            home.style.display = "flex"
+        })
+
+        btnSalvar.addEventListener("click",  function(){
+            let name = document.getElementById("edt-name").value;
+            let prec = document.getElementById("preco").value;
+            let quant = document.getElementById("quantidade").value;
+            let copia = {"nome": name, "preco": prec, "quantidade": quant};
+
+            produtos.push(copia);
+            console.log(produtos)
+        })
+
+        btnExcluir.addEventListener("click", function(){
+            let buscaNome = document.getElementById("name").value;
+
+            produtos.forEach(function(item, index){
+                if(buscaNome === item.nome){
+                    produtos.splice(index, 1);
+                    alert("Produto excluido!");
+                }
+            })
+        })
+
+        btnPesquisar.addEventListener("click", function(){
+            let buscaNome = document.getElementById("name").value;
+
+            produtos.forEach(function(item,index){
+                if(buscaNome === item.nome){
+                    alert("Produto encontado!");
+                }
+            })
+        })
+
+    </script>
+</body>
+</html>
