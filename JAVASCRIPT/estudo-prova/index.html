@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"> -->
+    
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div class="conteiner" id="caixa">
+            <div class="mt-3">
+                <label for="name">Nome:</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="mt-3">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email">
+            </div>
+            <div class="mt-3">
+                <label for="text">Mensagem</label>
+                <textarea name="mensagem" id="mensagem"></textarea>
+            </div>
+        </div>
+        <div class="mt-3">
+            <button type="button" id="button">Enviar</button>
+        </div>
+    </form>
+    <span id="mensagemVeri"></span>
+
+    <br><hr><br>
+
+    <ul>
+        <li>arroz</li>
+        <li>feijão</li>
+        <li>leite</li>
+        <li>pão</li>
+    </ul>
+
+    <br><hr><br>
+
+    <ol>
+        <li>luva</li>
+        <li>mascara</li>
+        <li>pente</li>
+    </ol>
+
+    <ul>
+        <li>luva</li>
+        <li>mascara</li>
+        <li>pente</li>
+    </ul>
+
+    <br><hr><br>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Rafa</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Vito</td>
+                <td>23</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><hr><br>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Quantidade disponível</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pneu</td>
+                <td>450,00</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>Parabrisa</td>
+                <td>34,90</td>
+                <td>70</td>
+            </tr>
+            <tr>
+                <td>Cera</td>
+                <td>48,80</td>
+                <td>150</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><hr><br>
+
+    <form>
+        <div class="card text-bg-secondary mb-3">
+            <div class="card-body">
+                <div class="mt-3">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="mt-3">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="mt-3">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password">
+                </div>
+                <div class="mt-3">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea name="mensagem" id="mensagem" placeholder="Escreva sua mensagem..."></textarea>
+                </div>
+                <div class="mt-3">
+                    <label for="pais">Informe seu país:</label>
+                    <select name="pais" id="pais">
+                        <option value="Brasil">Brasil</option>
+                        <option value="China">China</option>
+                        <option value="Japao">Japão</option>
+                    </select>
+                </div>
+                <div class="mt-3">
+                    <button type="button" class="btn btn-success">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <br><hr><br>
+
+    <div class="conteiner">
+        <div class="mt-3">
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino</label>
+            
+            <input type="radio" id="feminino" name="genero" value="feminino">
+            <label for="feminino">Feminino</label>
+            
+            <input type="radio" id="outro" name="genero" value="outro">
+            <label for="outro">Outro</label>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <a href="https://www.google.com/search?q=tibia%2C+o+melhor+jogo+do+mundo" target="_blank" rel="noopener noreferrer">
+        <button type="button">Tibia</button>
+    </a>
+
+    <br><hr><br>
+
+    <img src="https://i.pinimg.com/736x/c9/11/54/c9115496464ab2c4a63545153254c384.jpg" alt="Imagem de exemplo" class="img-fluid rounded">
+
+    <br><hr><br>
+
+    <div class="imag">
+        <div class="imag-text"> <span>Imagem clicável</span></div>        
+        <a href="https://br.pinterest.com/pin/422281211255231/"><img src="https://i.pinimg.com/736x/b2/1b/31/b21b312d56b5630d13488f01ef1d94e5.jpg" alt="mark de invenciveis"></a>
+    </div>
+    
+    <hr>
+
+    <h1>Texto de apoio</h1>
+
+    <p>video video video vvideo video video vvideo video video vvideo video video vvideo video video vvideo video video v</p>
+
+    <img src="https://i.pinimg.com/236x/70/4d/83/704d838916e8035e087fd8d57c604305.jpg" alt="desenho do pedro pascoal">
+
+    <hr>
+
+    <p class="paragrafo">Papagaio preto</p>
+
+    <hr>
+
+    <h1 class="h1">H1</h1>
+    <h2 class="h2">H2</h2>
+    <h3 class="h3">H3</h3>
+    
+    <hr>
+
+    <span class="peso">Jucelino cubechec ...</span>
+    <script src="./index.js"></script>
+
+    <hr>
+
+    <div class="espaco">
+        <form>
+            <label for="name">Nome:</label>
+            <input type="text" id="name">
+            <label for="password">Senha:</label>
+            <input type="password" id="password">
+        </form>
+    </div>
+
+    <hr> 
+
+    <p class="para">git push origin - serve para pegar um repositorio local e linkar ele com o repositorio no github.</p>
+</body>
+</html>

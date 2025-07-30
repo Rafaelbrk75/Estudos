@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Tabela</h1>
+    <hr><br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>João</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="col-2">
+            <button class="btn btn-success" id="botao">adicionar</button>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-danger" id="btn-remove">Remover</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        let pessoas = ["João"];
+        let btn = document.getElementById("botao");
+        let remove = document.getElementById("btn-remove");
+
+        btn.addEventListener("click", function(){
+            let addInfo = document.querySelector("tbody");
+            let name = prompt("Informe o nome: ");
+            pessoas.push(name);
+            let index = pessoas.length
+
+            addInfo.innerHTML += "<tr><td>"+index+"</td><td>"+name+"</td></tr>";
+        })
+
+        remove.addEventListener("click", function remover(){ 
+            let info = document.querySelector("tbody");
+            let nomeP = prompt("Informe o nome para remoção:");
+            let linha = document.querySelector("tr")
+
+            pessoas.forEach(function(item, index){
+                if(nomeP === item){
+                    info.innerHTML -= "<tr><td>"+index+"</td><td>"+nomeP+"</td></tr>";
+                    pessoas.splice(index, 1);
+                    alert("Pessoa removida");
+                }else{
+                    alert("Pessoa não encontrada");
+                }
+            })
+        })
+    </script>
+</body>
+</html>
