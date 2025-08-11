@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "MenosTela",
+    "slug": "menos-tela",
+    "scheme": "menostela",
+    "orientation": "portrait",
+    "jsEngine": "hermes",
+    "newArchEnabled": true,
+    "plugins": [],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "extra": {}
+  }
+}
